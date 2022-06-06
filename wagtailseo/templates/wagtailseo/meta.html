@@ -1,6 +1,6 @@
 {# Standard metadata #}
 {% block html_seo_base %}
-<title>{% block title %}{{ self.seo_pagetitle }}{% endblock %}</title>
+<title>{% block title %}{{ SITE_NAME }} - {{ self.title }}{% endblock %}</title>
 <link rel="canonical" href="{% block canonical %}{{ self.seo_canonical_url }}{% endblock %}">
 <meta name="description" content="{% block description %}{{ self.seo_description }}{% endblock %}" />
 {% if self.seo_og_type == "article" and self.seo_author %}
@@ -15,7 +15,7 @@
 <meta property="og:title" content="{% block og_title %}{{ self.seo_pagetitle }}{% endblock %}" />
 <meta property="og:description" content="{% block og_description %}{{ self.seo_description }}{% endblock %}" />
 <meta property="og:image" content="{% block og_image %}{{ self.seo_image_url }}{% endblock %}" />
-<meta property="og:site_name" content="{% block og_site_name %}{{ self.seo_sitename }}{% endblock %}" />
+<meta property="og:site_name" content="{% block og_site_name %}{{ SITE_NAME }}{% endblock %}" />
 <meta property="og:url" content="{% block og_url %}{{ self.seo_canonical_url }}{% endblock %}" />
 <meta property="og:type" content="{% block og_type %}{{ self.seo_og_type }}{% endblock %}" />
 {% if self.seo_og_type == "article" and self.seo_author %}
