@@ -489,7 +489,7 @@ class SeoMixin(Page):
 
         # Publisher, if available.
         if self.seo_struct_publisher_dict:
-            sd_dict.update({"publisher": self.seo_struct_publisher_dict})
+            sd_dict.update({"publisher": None})  # self.seo_struct_publisher_dict})
 
         return sd_dict
 
